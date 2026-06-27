@@ -1,0 +1,82 @@
+[
+  {
+    "feature": "car_age",
+    "importance": 0.22309
+  },
+  {
+    "feature": "company_audi",
+    "importance": 0.16229
+  },
+  {
+    "feature": "company_mini",
+    "importance": 0.14221
+  },
+  {
+    "feature": "kms_driven",
+    "importance": 0.14037
+  },
+  {
+    "feature": "company_other",
+    "importance": 0.10934
+  },
+  {
+    "feature": "company_bmw",
+    "importance": 0.03744
+  },
+  {
+    "feature": "company_toyota",
+    "importance": 0.02881
+  },
+  {
+    "feature": "fuel_type_diesel",
+    "importance": 0.02346
+  },
+  {
+    "feature": "model_name_other",
+    "importance": 0.02104
+  },
+  {
+    "feature": "company_mahindra",
+    "importance": 0.01601
+  },
+  {
+    "feature": "company_tata",
+    "importance": 0.01269
+  },
+  {
+    "feature": "fuel_type_petrol",
+    "importance": 0.00997
+  },
+  {
+    "feature": "model_name_mahindra scorpio",
+    "importance": 0.00844
+  },
+  {
+    "feature": "model_name_mahindra xuv500",
+    "importance": 0.00806
+  },
+  {
+    "feature": "model_name_honda city",
+    "importance": 0.00518
+  },
+  {
+    "feature": "company_hyundai",
+    "importance": 0.00507
+  },
+  {
+    "feature": "model_name_toyota etios",
+    "importance": 0.00498
+  },
+  {
+    "feature": "model_name_chevrolet beat",
+    "importance": 0.00493
+  },
+  {
+    "feature": "model_name_ford ecosport",
+    "importance": 0.00408
+  },
+  {
+    "feature": "company_volkswagen",
+    "importance": 0.00347
+  }
+]

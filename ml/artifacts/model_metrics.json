@@ -1,0 +1,89 @@
+{
+  "training_date": "2026-06-17T00:05:02.723938",
+  "model_type": "Random Forest Regressor",
+  "train_size": 652,
+  "test_size": 163,
+  "all_models": [
+    {
+      "model_name": "Linear Regression (baseline)",
+      "r2": 0.5573,
+      "rmse": 300252.15,
+      "mae": 151482.21
+    },
+    {
+      "model_name": "Random Forest Regressor",
+      "r2": 0.6309,
+      "rmse": 274166.72,
+      "mae": 113778.75,
+      "r2_tuned": 0.6245,
+      "rmse_tuned": 276533.55,
+      "mae_tuned": 119249.03
+    },
+    {
+      "model_name": "Gradient Boosting (XGBoost-style)",
+      "r2": 0.604,
+      "rmse": 283986.24,
+      "mae": 120318.44
+    }
+  ],
+  "best_model": {
+    "model_name": "Random Forest Regressor",
+    "r2": 0.6309,
+    "rmse": 274166.72,
+    "mae": 113778.75,
+    "r2_tuned": 0.6245,
+    "rmse_tuned": 276533.55,
+    "mae_tuned": 119249.03
+  },
+  "feature_meta": {
+    "numeric_features": [
+      "kms_driven",
+      "car_age"
+    ],
+    "categorical_features": [
+      "company",
+      "fuel_type",
+      "model_name"
+    ],
+    "top_companies": [
+      "maruti",
+      "hyundai",
+      "mahindra",
+      "tata",
+      "honda",
+      "toyota",
+      "chevrolet",
+      "renault",
+      "ford",
+      "volkswagen",
+      "skoda",
+      "audi",
+      "mini",
+      "bmw",
+      "datsun"
+    ],
+    "top_models": [
+      "maruti suzuki",
+      "mahindra scorpio",
+      "honda city",
+      "hyundai i20",
+      "renault duster",
+      "tata indigo",
+      "hyundai santro",
+      "hyundai eon",
+      "chevrolet beat",
+      "honda amaze",
+      "hyundai grand",
+      "hyundai elite",
+      "hyundai verna",
+      "ford ecosport",
+      "mahindra xuv500",
+      "toyota corolla",
+      "tata indica",
+      "hyundai i10",
+      "volkswagen polo",
+      "toyota etios"
+    ],
+    "car_age_base_year": 2024
+  }
+}
