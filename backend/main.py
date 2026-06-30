@@ -45,11 +45,10 @@ app = FastAPI(
 )
 
 from os import getenv
-from fastapi.middleware.cors import CORSMiddleware
-
+allowed_origins = getenv("ALLOWED_ORIGINS","http://localhost:5173,http://127.0.0.1:5173").split(",")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[origin.strip() for origin in allowed_origins if origin.strip()],
+    allow_origins=[o.strip() for o in allowed_origins],
     allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -60,17 +59,17 @@ app.add_middleware(
 # ─────────────────────────────────────────────
 def normalize_company(company: str) -> str:
     """Match company to known training values."""
-    known = metrics.get("feature_meta", {}).get("top_companies", [])
+    known = {x.lower() for x in metrics.get("feature_meta", {}).get("top_companies", [])}
     c = company.strip().lower()
     return c if c in known else "other"
 
 def normalize_fuel(fuel: str) -> str:
-    mapping = {"petrol": "petrol", "diesel": "diesel", "cng": "cng", "lpg": "lpg", "electric": "petrol"}
+    mapping = {"petrol": "petrol", "diesel": "diesel", "cng": "cng", "lpg": "lpg", "electric": "other"}
     return mapping.get(fuel.strip().lower(), "petrol")
 
 def normalize_model(name: str) -> str:
     """Extract 2-token model slug, fallback to 'other'."""
-    known = metrics.get("feature_meta", {}).get("top_models", [])
+    known = {x.lower() for x in metrics["feature_meta"]["top_models"]}
     slug = " ".join(name.strip().lower().split()[:2])
     return slug if slug in known else "other"
 
